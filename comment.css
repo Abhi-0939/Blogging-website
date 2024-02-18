@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+.container{
+    background: #fff;
+    padding: 20px;
+    font-family: monospace;
+    width: 500px;
+    box-shadow: 0 0 5px #000;
+}
+
+.head{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.text{
+    margin: 10px 0;
+    font-size: 0.9em;
+   font-family: sans-serif;
+} 
+
+.commentbox{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.commentbox > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content{
+    width: 100%;
+}
+.content h2{
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.user{
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    color: #2f2828;
+    right: 80%;
+    padding: 10px;
+    padding-left: 0;
+    margin-right: 11rem;
+
+}
+
+.commentinput > input {
+    border: none;
+    padding: 10px;
+    padding-left: 0;
+    outline: none;
+    border-bottom: 2px solid rgb(26, 26, 27);
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+
+.buttons button{
+    padding: 5px 10px;
+    background: lightgray;
+    color: #808080;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.buttons button.abled{
+    background: rgb(41, 41, 43);
+    color: #fff;
+ 
+}
+
+.policy{
+    margin: 20px 0;
+    font-size: .8em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #808080;
+}
+
+.policy a{
+    text-decoration: none;
+    color: blue;
+}
+
+.modify{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.modify > input{
+    margin-right: 5px;
+}
+
+.parents{
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin-bottom: 30px;
+}
+.parents h1{
+    font-size:  0.9em;
+}
+
+.parents p{
+    margin: 10px 0;
+    font-size: 0.9em;
+} 
+.parents > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.engagements {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.engagements img{
+    width: 20px;
+}
+
+.engagements img:nth-child(1){
+    margin-right: 10px;
+    width: 25px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(37, 35, 35);
+    width: 90%;
+    margin-top: 50px;
+    padding: 3rem 2rem;
+    color: #fff;
+    height: 45vh;
+}
+.group h2{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.sub{
+
+    width: 120px;
+    height: 42px;
+    background-color: rgb(38, 38, 38);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    outline: none;
+    font-size: 1.1rem;
+
+}
+.sub i{
+    margin-left: 5px;
+}
+.sub:hover{
+  background-color: rgb(53, 53, 54) ;
+}
+
+.userName input{
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 75%;
+    height: 40px;
+    padding-left: 10px;
+    border: #212020 solid 1px;
+}
+.userComment textarea{
+    font-size: 1rem;
+    border: #212020 solid 1px;
+    width: 75%;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 4px;
+    margin-bottom: 5px;
+}
+
+.container #msg{
+    color: #61b752;
+    display: block;
+    transition: .3s ease;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+

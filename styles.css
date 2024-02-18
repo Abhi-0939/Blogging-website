@@ -1,0 +1,374 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 66vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+   
+}
+
+/* ----------------------Header-------------------- */
+
+header{
+    z-index: 999999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+}
+header.sticky{
+    background: rgba(255, 255, 255, .1);
+    box-shadow: var(--box-shadow);
+}
+.nav-bar{
+    position: relative;
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    transition: 0.6s ease;
+  
+}
+header.sticky .nav-bar{
+    height:calc(2.5rem + 1rem) ;
+}
+.nav-bar .logo{
+    color: var(--first-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.nav-items a{
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+.nav-items a.active{
+    color: var(--second-color);
+}
+
+.nav-items a:not(:last-child){
+    margin-right: 50px;
+}
+.nav-items a:hover{
+    color: var(--second-color);
+}
+.nav-menu-btn{
+    display: none;
+}
+.content{
+     max-width: 568px; 
+    text-align: center;
+    color: rgba(81, 75, 75, 0.846);
+    margin: 0 auto;
+}
+.main_container{
+    margin-top: 60px;
+    display: grid;
+    gap: 1.5rem;
+    /* grid-template-columns: repeat(1,1fr); */
+    grid-template-columns: repeat(auto-fit,minmax(300px,350px));
+    justify-content: center;
+    
+}
+
+/* @media(min-width:740px){
+   .main_container{
+    grid-template-columns: repeat(2,1fr);
+   }
+} */
+/* @media(min-width:1080px){
+    .main_container{
+     grid-template-columns: repeat(3,1fr);
+    }
+ } */
+ /* @media(min-width:1460px){
+    .main_container{
+     grid-template-columns: repeat(4,1fr);
+    }
+}  */
+
+.card_container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(164, 163, 163);
+    border-radius: 10px;
+}
+.card_img_container{
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+ 
+}
+@media(min-width:740px){
+    .card_img_container{
+        height:13rem;
+    }
+}
+@media(min-width:1080px){
+    .card_img_container{
+        height:11rem;
+    }
+}
+@media(min-width:1460px){
+    .card_img_container{
+        height:10rem;
+    }
+}
+.card_image{
+     object-fit: cover;
+    object-position: center;
+      position: absolute; 
+     height: 100%;
+     width: 100%;
+} 
+.card_title_container{
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem;
+}
+.card_container:hover .card_image{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.4rem;
+    line-height: 1.3rem;
+}
+.card_title:hover {
+    color: blue;
+}
+.card_desc{
+    color: rgba(93, 79, 79, 0.597);
+}
+
+.card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+ .card_footer_left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem
+} 
+.avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border:1px solid rgba(110, 108, 108, 0.545);
+    border-radius: 50%;
+    background-color: rgba(235, 225, 225, 0.877);
+}
+.auothor_info{
+    display: flex;
+    flex-direction: column;
+}
+.auothor_info .name{
+    color: rgb(87, 87, 245);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.auothor_info .date{
+    color: rgb(174, 171, 171);
+}
+
+.card_footer_right{
+    border-radius: 2px;
+  
+}
+ .work{
+    border: solid 1px rgb(99, 92, 92);
+    padding: 5px 10px;
+    color: rgb(111, 104, 104);
+    border-radius: 4px;
+} 
+/* 
+----------------contact section============== */
+
+
+
+/* ==========================common styling ------------------------- */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    position: relative;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 2rem 2rem;
+}
+.sub-section{
+    position: relative;
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 0;
+}
+.section-title-01{
+   font-size: 4.5em;
+   font-weight: 800;
+   margin-bottom: 2rem;
+   background: linear-gradient(to top,transparent 0%, var(--first-color) 70%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   opacity: .1;
+}
+.section-title-02{
+    font-size: 2.5em;
+    font-weight: 700;
+    transform: translateY(-80px);
+}
+.section-title-02:before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    background: var(--second-color);
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(37, 35, 35);
+    width: 100%;
+    margin-top: 50px;
+    padding: 3rem 2rem;
+    color: #fff;
+    height: 45vh;
+}
+footer a{
+    color: #fff;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1150px;
+}
+.footer-container .about h2{
+    font-size: 3em;
+    font-weight: 600;
+    background: linear-gradient(to top,transparent 0%, #fff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .8;
+}
+.footer-container .about p{
+    font-size: var(--normal-font-size);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.footer-container .info,
+.footer-container .follow{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-container .info h3,
+.footer-container .follow h3{
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.footer-container .follow ul{
+    display: flex;
+    
+
+}
+.footer-container .info a{
+    margin: 20px;
+}
+.footer-container .follow a{
+   font-size: 1.5em;
+   margin: 20px;
+}
+.footer-copyright p{
+    font-size: var(--normal-font-size);
+    font-weight: 300;
+    margin-top: 50px;
+}
+footer ul li{
+    list-style: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.group{
+    flex-direction: column;
+}
+
+/* ////////=========descriptoin Page ================------------------------- */
+.description{
+    padding-top: 90px;
+    text-align: justify;
+    width: 65vw;
+    margin: 0 auto;
+}
+.new-card{
+    width: 65vw ;
+    height: 65vh;
+}
+
+.title{
+    margin-top: 8px;
+    margin-bottom: 14px;
+
+}
+.common{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.desc{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.desc .Author{
+    font-weight: 700;
+    padding-bottom: 5px;
+    font-style: italic;
+}
+  
+

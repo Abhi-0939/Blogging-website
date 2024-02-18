@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comment Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="comment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+  <div class="header_container">
+    <header>
+        <div class="nav-bar">
+            <a href="#" class="logo">Supreme Blogs</a>
+            <div class="navigation">
+                <div class="nav-items">
+                    <div class="nav-close-btn"></div>
+                    <a class="active" href="index.html">Home</a>
+                    <a href="#about">About</a>
+                    
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="nav-menu-btn"></div>
+        </div>
+ </header>
+</div>
+  
+   <section>
+    <div class="container">
+
+      <form name="submit-to-google-sheet" >
+        <h1>Post Feedback</h1> 
+          <br>
+         <div class="userName">
+          
+          <input class="" name="Name" placeholder="Enter Name" id="NAME" type="text">
+         </div>
+         <br>
+         <div class="userComment">
+          <textarea name="Message" name="" placeholder="Enter Feedback" id="COMMENT" cols="30" rows="8"></textarea>
+         </div>
+  
+         <button type="submit" class="sub">submit <i class="fas fa-paper-plane"></i></button>
+      </form>
+      <span id="msg"></span>
+    </div>
+    
+   </section>
+
+   
+  <section>
+    <footer>
+      <div class="footer-container">
+          <div class="about group">
+              <h2>Supreme Blogs</h2>
+              <p> A frequently updated web page used for personal commentary</p>
+              
+          </div>
+          <div class="hr"></div>
+       
+          <div class="hr"></div>
+          <div class="follow group">
+              <h3>Follow</h3>
+              <ul>
+                  <li><a href="https://www.facebook.com/abhiraj.gaikwad.568?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/abhiraj-gaikwad-63a448257"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href=""><i class="fab fa-instagram"></i></a></li>
+              </ul>
+          </div> 
+      </div>
+      
+  </footer>
+  </section>
+    
+  
+
+    <!-- <script>
+        "use strict";
+
+        const userId = {
+            name:null,
+            identity: null,
+            image:null,
+            message:null,
+            date:null
+        }
+
+       const userComment = document.querySelector(".usercomment");
+       const publishBtn = document.querySelector("#publish");
+       const comments = document.querySelector(".comments");
+       const userName = document.querySelector(".user");
+
+       userComment.addEventListener("input", e => {
+          if(!userComment.value) {
+            publishBtn.setAttribute("disabled","disabled");
+            publishBtn.classList.remove("abled");
+          }
+          else{
+            publishBtn.removeAttribute("disabled");
+            publishBtn.classList.add("abled")
+          }
+       })
+
+
+
+       function addPost() {
+         
+        if(!userComment.value) return ;
+        userId.name = userName.value;
+          if(userId.name === "Anonymous"){
+            userId.identity = false;
+            userId.image = "anonymous.png"
+          }
+          else{
+            userId.identity = true;
+            userId.image = "user.png";
+          }
+
+          userId.message = userComment.value;
+          userId.date = new Date().toLocaleString();
+          let published = 
+          `<div class="parents">
+            
+            <div>
+                <h1>${userId.name}</h1>
+                <p>${userId.message}</p>
+               
+                <span class="date">${userId.date}</span>
+                </div>
+            </div>`;
+
+            comments.innerHTML += published;
+            userComment.value = "";
+       }
+
+       publishBtn.addEventListener("click", addPost)
+
+    </script> -->
+
+ 
+
+<!-- <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzTiV_vIPGLWIWDTvNyENtVR_ShxxeT_Fp353qSCswiGpT6rvwzNbys8fqCoVuU-GI3MA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+           msg.innerHTML = "Message sent Successfully !"
+           setTimeout(function (){
+              msg.innerHTML= ""
+           },4000)
+           form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script> -->
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw7sJ0sXOuGFO-B4QESfR3pdOk_DqRIzq4O_vFtOeSoOX6JyG93jfMz8YacvyrMJKmxgQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },4000)
+            form.reset()
+        })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+  
+    
+</body>
+</html>
